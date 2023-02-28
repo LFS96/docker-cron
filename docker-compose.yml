@@ -2,8 +2,6 @@ version: "3"
 services:
   cron:
     container_name: cron
-    build:
-      context: .
-      dockerfile: Dockerfile
+    image: lfs96/cron:latest
     volumes:
       - ./crontabs/:/etc/crontabs/
